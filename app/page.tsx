@@ -1,5 +1,7 @@
 import { getRevenue } from "@/actions/revenue";
 
+export const revalidate = 60;
+
 export default async function Home() {
   const revenue = await getRevenue();
 
