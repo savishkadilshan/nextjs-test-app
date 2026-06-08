@@ -1,7 +1,8 @@
 import { getRevenue } from "@/actions/revenue";
+import { RevenueCard } from "@/components/revenue-card-client";
 
 // export const revalidate = 60;
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const revenue = await getRevenue();
@@ -19,6 +20,8 @@ export default async function Home() {
           Loaded directly from the Neon database on the server.
         </p>
       </main>
+
+      <RevenueCard />
     </div>
   );
 }
