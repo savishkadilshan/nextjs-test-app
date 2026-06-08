@@ -1,6 +1,7 @@
 import { getRevenue } from "@/actions/revenue";
 
-export const revalidate = 60;
+// export const revalidate = 60;
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const revenue = await getRevenue();
